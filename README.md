@@ -5,9 +5,9 @@ Each question to be placed in a directory named with the question name, inside t
 
 easy/\
 |-> Sample Question 1/\
-|   |-> README.md  - Question description\
-|   |-> src/       - Source files\
-|   |-> notes.txt  - Optional, only for question creators, remove before publishing\
-|
+|&nbsp;&nbsp;&nbsp;|->README.md &nbsp;- Question description\
+|&nbsp;&nbsp;&nbsp;|-> src/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Source files\
+|&nbsp;&nbsp;&nbsp;|-> notes.txt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Optional, only for question creators, remove before publishing\
+|\
 |-> Sample Question 2/\
 |-> Sample Question 3/\
