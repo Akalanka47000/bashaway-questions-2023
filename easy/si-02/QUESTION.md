@@ -1,4 +1,4 @@
-# Si-02
+# Triangular numbers
 
 ![](https://thirdspacelearning.com/wp-content/uploads/2022/05/Triangular-numbers-image-3.png)
 
