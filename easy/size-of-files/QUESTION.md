@@ -1,4 +1,4 @@
-# Si-01
+# Size of Files
 
 Give set of files and get sum of the file sizes in bytes
 
