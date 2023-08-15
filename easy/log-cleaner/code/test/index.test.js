@@ -1,6 +1,6 @@
 const fs = require('fs');
 const exec = require("@sliit-foss/actions-exec-wrapper").default;
-const { scan, scanPure, shellFiles, cleanLogs, compactString, dependencyCount } = require('@sliit-foss/bashaway');
+const { scan, scanPure, shellFiles, cleanLogs, compactString, dependencyCount, prohibitedCommands } = require('@sliit-foss/bashaway');
 
 test('should validate if only bash files are present', () => {
     const shellFileCount = shellFiles().length;
@@ -51,13 +51,17 @@ describe('should check if the logs are removed', () => {
 });
 
 describe('should check installed dependencies', () => {
-    test("bashaway package function should not be called", () => {
-        const script = fs.readFileSync('./execute.sh', 'utf-8')
+    let script
+    beforeAll(() => {
+        script = fs.readFileSync('./execute.sh', 'utf-8')
+    });
+    test("bashaway package functions should not be called", () => {
         expect(script).not.toContain("@sliit-foss");
         expect(script).not.toContain("bashaway");
     });
     test("no additional npm dependencies should be installed", async () => {
         await expect(dependencyCount()).resolves.toStrictEqual(3)
+        expect(script).not.toMatch(prohibitedCommands);
     });
 });
 

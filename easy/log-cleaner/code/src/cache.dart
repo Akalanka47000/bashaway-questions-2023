@@ -14,7 +14,6 @@ class Cache {
       data = "0:$data";
     }
     await storage.write(key: key, value: data, aOptions: aOptions, iOptions: iOptions);
-    debugPrint("Saved $key to cache");
   }
 
   static Future<String?> retrieve(String key) async {
