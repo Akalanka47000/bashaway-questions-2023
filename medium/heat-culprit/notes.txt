@@ -1,0 +1,24 @@
+Type: File manipulation / data processing
+
+Scenario:
+A machine where there are multiple components that are conencted to a somputer sytem. Participants are given multiple log files of the
+machine for a day. One containing the temperature logs of the system, and more containing the starting and stopping time for each
+component.
+
+Input format:
+One heat log file and operation log files for each component.
+
+Constraints:
+All logs contain unix time stamps. Only one component will be active at a given time.
+
+Question:
+Heat levels can be categorized as follows,
+  high: greater than 60 C
+  medium: between 30 C and 60 C
+  low: lesser than 30 C
+During a single operation time period, a component's heat level is the highest heat level they achieved.
+
+Generate a "daily heat generation" report mentioning the number of times each compenent achieved each heat level.
+
+Output format:
+<component number> | high: # | medium: # | low: #
