@@ -4,7 +4,7 @@ To you who's dabbling in the art of network sorcery, a noble task awaits—a tas
 
 ## Constraints
 
-- The script should be purely written in bash
+- The script must be **purely written in bash within the execute.sh file**.
 
 ## Output / Evaluation Criteria
 

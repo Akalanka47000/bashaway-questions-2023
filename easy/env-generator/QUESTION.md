@@ -11,7 +11,7 @@ There will be multiple secrets in the yaml file
 
 ## Constraints
 
-- The script should be purely written in bash within the **execute.sh** file without using any other programming language
+- The script must be **purely written in bash within the execute.sh file**.
 
 ## Output / Evaluation Criteria
 

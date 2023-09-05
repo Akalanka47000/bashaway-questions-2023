@@ -4,7 +4,7 @@ Craft a script that, based on the file's language, purges all unwanted echoes fr
 
 ## Constraints
 
-- The script should be purely written in bash within the **execute.sh** file without using any other programming language
+- The script must be **purely written in bash within the execute.sh file**.
 
 ## Output / Evaluation Criteria
 
