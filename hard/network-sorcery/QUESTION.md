@@ -4,7 +4,7 @@ To you who's dabbling in the art of network sorcery, a noble task awaits—a tas
 
 ## Constraints
 
-- The script should be purely written in bash without using any external tools
+- The script should be purely written in bash
 
 ## Output / Evaluation Criteria
 

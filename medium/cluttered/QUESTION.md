@@ -4,7 +4,7 @@ In the vast landscape of MongoDB's data kingdom named **bashaway-2k23-cluttered*
 
 ## Constraints
 
-- The script should be purely written in bash within the **execute.sh** file without using any other programming language
+- The script should be purely written in bash within the **execute.sh** file
 
 ## Output / Evaluation Criteria
 
