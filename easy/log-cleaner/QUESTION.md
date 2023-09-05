@@ -1,17 +1,11 @@
 # Log cleaner
 
-Given a couple of source code files which are inside the `src` directory
-
-- If the file is a javascript file, remove all `console.log` statements
-- If the file is a python file, remove all `print` statements
-- If the file is a java file remove all `System.out.println` statements
-- If the file is a C# file remove all `Console.WriteLine` statements
-- If the file is a dart file, remove all `print` statements
+Craft a script that, based on the file's language, purges all unwanted echoes from the codebase. Silence the chatter of **console.log in JavaScript**, hush the **print incantations in Python and Dart**, banish the **System.out.println cries in Java** and extinguish the **Console.WriteLine whispers in C#** restoring harmony to the code. The tarnished files can be found in the **src** directory.
 
 ## Constraints
 
-- The script should be purely written in bash within the `execute.sh` file without using any other programming language
+- The script should be purely written in bash within the **execute.sh** file without using any other programming language
 
 ## Output / Evaluation Criteria
 
-- The cleaned files should be inside a directory called `out`
+- The cleaned files should be inside a directory called **out**

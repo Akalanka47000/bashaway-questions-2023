@@ -52,5 +52,4 @@ test('should check if there are hardcoded values', () => {
     expect(script).not.toContain(".sms");
     expect(script).not.toContain(".env.email");
     expect(script).not.toContain(".report");
-   
 });
