@@ -3,5 +3,5 @@ module.exports = {
         '.*/dist/'
     ],
     testPathIgnorePatterns: ['.*/node_modules/', '.*/src/', '.*/dist/'],
-    runInBand: true,
+    maxWorkers: 1
 };

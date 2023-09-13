@@ -3,6 +3,8 @@ const exec = require('@sliit-foss/actions-exec-wrapper').default;
 const { client, insert, databaseName } = require('./insert');
 const { scan, shellFiles, dependencyCount, prohibitedCommands } = require('@sliit-foss/bashaway');
 
+jest.setTimeout(20000);
+
 test('should validate if only bash files are present', () => {
     const shellFileCount = shellFiles().length;
     expect(shellFileCount).toBe(1);

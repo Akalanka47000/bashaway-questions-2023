@@ -5,7 +5,7 @@ In the untold chronicles of version control, command **a bash script to leapfrog
 ## Constraints
 
 - The script must be **purely written in bash within the execute.sh file**.
-- Do not write anything to the **dist** folder. All modifications should be within the cloned repository withing **src**
+- Do not write anything to the **dist** folder. All modifications should be within the cloned repository within **src**
 
 ## Output / Evaluation Criteria
 
