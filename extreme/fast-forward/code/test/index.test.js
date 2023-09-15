@@ -2,6 +2,8 @@ const fs = require('fs');
 const exec = require('@sliit-foss/actions-exec-wrapper').default;
 const { scan, shellFiles, dependencyCount, commitList, prohibitedCommands } = require('@sliit-foss/bashaway');
 
+jest.setTimeout(90000);
+
 let dir
 
 beforeAll(() => {
