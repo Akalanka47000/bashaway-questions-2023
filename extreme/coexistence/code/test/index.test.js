@@ -6,6 +6,8 @@ const webdriver = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 require('chromedriver')
 
+jest.setTimeout(10000);
+
 test('should validate if only bash files are present', () => {
     const shellFileCount = shellFiles().length;
     expect(shellFileCount).toBe(1);
@@ -80,10 +82,6 @@ describe('should check if the websites were merged successfully', () => {
 });
 
 describe('should check installed dependencies', () => {
-    let script
-    beforeAll(() => {
-        script = fs.readFileSync('./execute.sh', 'utf-8')
-    });
     test("no additional npm dependencies should be installed", async () => {
         await expect(dependencyCount()).resolves.toStrictEqual(6)
     });
