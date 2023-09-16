@@ -1,8 +1,9 @@
 const fs = require('fs');
-const { Builder, By, until } = require('selenium-webdriver')
+const { By, until } = require('selenium-webdriver')
 const { scan, shellFiles, dependencyCount } = require('@sliit-foss/bashaway');
 
-require('selenium-webdriver/chrome')
+const webdriver = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 require('chromedriver')
 
 test('should validate if only bash files are present', () => {
@@ -13,8 +14,11 @@ test('should validate if only bash files are present', () => {
 
 describe('should check if the websites were merged successfully', () => {
     const rootURL = 'http://localhost:8088'
-
-    const d = new Builder().forBrowser('chrome').build()
+    const chromeOptions = new chrome.Options();
+    chromeOptions.addArguments("--no-sandbox")
+    chromeOptions.addArguments("--disable-dev-shm-usage")
+    chromeOptions.addArguments("--headless")
+    const d = new webdriver.Builder().forBrowser(webdriver.Browser.CHROME).setChromeOptions(chromeOptions).build()
     const waitUntilTime = 5000
     let driver
 
