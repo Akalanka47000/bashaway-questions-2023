@@ -1,6 +1,7 @@
 ## Start Install Google Chrome (You may comment out these lines during local development if you already have Chrome installed)
 
 sudo apt update
+
 sudo apt upgrade
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

@@ -36,31 +36,46 @@ describe('should check if the websites were merged successfully', () => {
         return await driver.wait(until.elementIsVisible(el), waitUntilTime)
     }
 
+    async function click(el) {
+        await el.click()
+    }
+
     afterAll((done) => done())
 
     test('non existant routes should display 404 page of the cornerstone', async () => {
         await driver.navigate().to(rootURL);
-        expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
+        await expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
         await driver.navigate().to(rootURL + '/abc');
-        expect(driver.getTitle()).resolves.toBe('404 | Cornerstone');
-        (await getElementById('home-btn')).click();
-        expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
+        await expect(driver.getTitle()).resolves.toBe('404 | Cornerstone');
+        await getElementById('home-btn').then(click)
+        await expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
     });
 
     test('should navigate to and back from the dashboard successfully', async () => {
         await driver.navigate().to(rootURL);
-        (await getElementById('dashboard-btn')).click();
-        expect(driver.getTitle()).resolves.toBe('Dashboard');
-        (await getElementById('home-btn')).click();
-        expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
+        await getElementById('dashboard-btn').then(click)
+        await expect(driver.getTitle()).resolves.toBe('Dashboard');
+        await getElementById('home-btn').then(click)
+        await expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
     });
 
-    test('should navigate to and back from the support page successfully', async () => {
-        await driver.navigate().to(rootURL);
-        (await getElementById('support-btn')).click();
-        expect(driver.getTitle()).resolves.toBe('Support');
-        (await getElementById('home-btn')).click();
-        expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
+    describe('support page', () => {
+        test('should navigate to and back successfully', async () => {
+            await driver.navigate().to(rootURL);
+            await getElementById('support-btn').then(click)
+            await expect(driver.getTitle()).resolves.toBe('Support');
+            await getElementById('home-btn').then(click)
+            await expect(driver.getTitle()).resolves.toBe('Home | Cornerstone');
+        });
+        test('should check element styles', async () => {
+            await driver.navigate().to(rootURL + '/support');
+            const title = await getElementById('title');
+            expect(title.getCssValue('font-size')).resolves.toBe('60px');
+            expect(title.getCssValue('color')).resolves.toBe('rgba(0, 0, 0, 1)');
+            const homeBtn = await getElementById('home-btn');
+            expect(homeBtn.getCssValue('background-color')).resolves.toBe('rgba(0, 0, 0, 1)');
+            expect(homeBtn.getCssValue('font-size')).resolves.toBe('20px');
+        });
     });
 });
 

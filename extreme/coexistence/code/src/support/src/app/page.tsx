@@ -17,7 +17,7 @@ export default function Home() {
         <path d="m2 14 6 6" />
       </svg>
 
-      <h1 className="text-black text-6xl font-bold mt-10 mb-4">Support</h1>
+      <h1 id="title" className="text-black text-6xl font-bold mt-10 mb-4">Support</h1>
       <a
         id="home-btn"
         href="/"
