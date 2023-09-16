@@ -22,14 +22,14 @@ test('should validate if only bash files are present', () => {
 });
 
 test('should check if the file size is calculated properly', async () => {
-    let calculatedTotalSize = await exec(`bash execute.sh`)
-    if (calculatedTotalSize) calculatedTotalSize = Number(calculatedTotalSize.trim());
     const files = scanPure('src/**');
     const actualTotalSize = files.reduce((acc, file) => {
         const stats = fs.statSync(file);
         return acc + stats.size;
     }, 0);
     expect(files.length).toBeGreaterThanOrEqual(10);
+    let calculatedTotalSize = await exec(`bash execute.sh`)
+    if (calculatedTotalSize) calculatedTotalSize = Number(calculatedTotalSize.trim());
     expect(calculatedTotalSize).toBe(actualTotalSize);
 });
 
@@ -44,6 +44,7 @@ describe('should check installed dependencies', () => {
         expect(script).not.toContain("@sliit-foss");
         expect(script).not.toContain("bashaway");
         expect(script).not.toContain("scanPure");
+        expect(script).not.toContain("fs.statSync");
     });
     test("no additional npm dependencies should be installed", async () => {
         await expect(dependencyCount()).resolves.toStrictEqual(4)
