@@ -9,5 +9,7 @@ Get ready to orchestrate a seamless data migration spectacle! In this challenge,
 ## Output / Evaluation Criteria
 
 - All databases, collections and documents except for the system defaults which exist in the first instance (`bashaway-2k23-sunset`) must exist in the second instance (`bashaway-2k23-sunrise`)
+
 - No extra databases, collections or documents should exist in the second instance (`bashaway-2k23-sunrise`) which do not exist in the first instance (`bashaway-2k23-sunset`)
+
 - Make sure you clean up the working directory after the script has been executed. The working directory should be in the same state as it was before the script was executed.

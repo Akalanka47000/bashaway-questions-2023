@@ -5,11 +5,15 @@ Imagine you're on an epic quest to uncover hidden treasures in a mysterious fore
 ## Constraints
 
 - The script must be **purely written within the execute.sh file**.
+
 - You can install any tool you need to complete the task
+
 - Do not write anything to the **dist** folder. All modifications should be within the cloned repository within **src**
 
 ## Output / Evaluation Criteria
 
 - All committer and author names of commits where the author is **github-actions[bot]** must be updated to **github-actions**
+
 - **No commits should be lost**. This includes the initial commit, merge commits, etc.
+
 - **The current branch should not change**.

@@ -17,6 +17,9 @@ bash execute.sh --keys=ENV_KEY1,ENV_KEY2 --script=./script.sh # script.sh runs o
 ## Output / Evaluation Criteria
 
 - A script which can be invoked with the **--keys** and **--script** flags and satisfies the constraints above.
+
 - The script must be able to handle any number of keys.
+
 - The script must output **Access Denied** if any of the keys are missing.
+
 - The script must output a suitable warning if the **--script** flag or **--keys** flag are missing and exit gracefully.

@@ -5,10 +5,13 @@ Imagine you're the hero of efficiency, tasked with a mission to clone all public
 ## Constraints
 
 - The script must be **purely written in bash within the execute.sh file**.
+
 - Do not write anything to the **dist** folder.
 
 ## Output / Evaluation Criteria
 
 - Successfull invokation of the command should be able to clone all public repositories of an organization to a given destination.
+
   - Example: Invoking **git clone-gh-org sliit-foss ./dist** should clone all public repositories of the organization **sliit-foss** to the **dist** folder. At the time of writing this, the organization has 82 public repositories.
+  
 - Only public repositories should be cloned
