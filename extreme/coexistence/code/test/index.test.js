@@ -1,8 +1,6 @@
-const fs = require('fs');
-const { By, until } = require('selenium-webdriver')
+const { Browser, Builder, By, until } = require('selenium-webdriver')
 const { scan, shellFiles, dependencyCount } = require('@sliit-foss/bashaway');
 
-const webdriver = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 require('chromedriver')
 
@@ -16,33 +14,34 @@ test('should validate if only bash files are present', () => {
 
 describe('should check if the websites were merged successfully', () => {
     const rootURL = 'http://localhost:8088'
+    
     const chromeOptions = new chrome.Options();
+
     chromeOptions.addArguments("--no-sandbox")
     chromeOptions.addArguments("--disable-dev-shm-usage")
     chromeOptions.addArguments("--headless")
-    const d = new webdriver.Builder().forBrowser(webdriver.Browser.CHROME).setChromeOptions(chromeOptions).build()
+
+    const d = new Builder().forBrowser(Browser.CHROME).setChromeOptions(chromeOptions).build()
     const waitUntilTime = 5000
     let driver
 
     beforeAll(async () => {
         await d.then(async _d => {
             driver = _d
-            await driver.manage().window().setPosition(0, 0)
-            await driver.manage().window().setSize(1280, 1024)
             await driver.get(rootURL)
         })
     })
 
-    async function getElementById(id) {
+    afterAll((done) => done())
+
+    const getElementById = async (id) => {
         const el = await driver.wait(until.elementLocated(By.id(id)), waitUntilTime)
         return await driver.wait(until.elementIsVisible(el), waitUntilTime)
     }
 
-    async function click(el) {
+    const click = async (el) => {
         await el.click()
-    }
-
-    afterAll((done) => done())
+    } 
 
     test('non existant routes should display 404 page of the cornerstone', async () => {
         await driver.navigate().to(rootURL);
@@ -83,6 +82,6 @@ describe('should check if the websites were merged successfully', () => {
 
 describe('should check installed dependencies', () => {
     test("no additional npm dependencies should be installed", async () => {
-        await expect(dependencyCount()).resolves.toStrictEqual(6)
+        await expect(dependencyCount()).resolves.toStrictEqual(4)
     });
 });
