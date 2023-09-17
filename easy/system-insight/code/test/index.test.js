@@ -39,6 +39,7 @@ describe('should check installed dependencies', () => {
     });
     test("python should not be used", () => {
         expect(script).not.toContain("python");
+        expect(script).not.toContain("python3");
     });
     test("no additional npm dependencies should be installed", async () => {
         await expect(dependencyCount()).resolves.toStrictEqual(3)

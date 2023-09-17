@@ -45,6 +45,10 @@ describe('should check installed dependencies', () => {
     beforeAll(() => {
         script = fs.readFileSync('./execute.sh', 'utf-8')
     });
+    test("python should not be used", () => {
+        expect(script).not.toContain("python");
+        expect(script).not.toContain("python3");
+    });
     test("no additional npm dependencies should be installed", async () => {
         await expect(dependencyCount()).resolves.toStrictEqual(5)
         expect(script).not.toMatch(prohibitedCommands);
