@@ -1,7 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const exec = require('@sliit-foss/actions-exec-wrapper').default;
-const { scan, shellFiles, dependencyCount, prohibitedCommands } = require('@sliit-foss/bashaway');
+const { scan, shellFiles, dependencyCount, prohibitedCommands, restrictJavascript, restrictPython } = require('@sliit-foss/bashaway');
 
 test('should validate if only bash files are present', () => {
     const shellFileCount = shellFiles().length;
@@ -31,15 +31,13 @@ describe('should check installed dependencies', () => {
         expect(script).not.toContain("bashaway");
     });
     test("javacript should not be used", () => {
-        expect(script).not.toContain("node --eval");
-        expect(script).not.toContain("node -e");
+        restrictJavascript(script)
         expect(script).not.toContain("const os = require('os')");
         expect(script).not.toContain("os.cpus()");
         expect(script).not.toContain("os.totalmem()");
     });
     test("python should not be used", () => {
-        expect(script).not.toContain("python");
-        expect(script).not.toContain("python3");
+        restrictPython(script)
     });
     test("no additional npm dependencies should be installed", async () => {
         await expect(dependencyCount()).resolves.toStrictEqual(3)
