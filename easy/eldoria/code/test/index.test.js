@@ -28,7 +28,7 @@ test('should validate if only bash files are present', () => {
 test('should check if the scrolls are merged properly', async () => {
     await exec('bash execute.sh');
     merged.sort((a, b) => Number(b.split(',')[1]) - Number(a.split(',')[1]));
-    expect(compactString(fs.readFileSync(`./dist/merged-scrolls.csv`, 'utf-8'))).toBe(compactString([`Item,Value(Silver Sovereigns)`, ...merged].join('\n')));
+    expect(compactString(fs.readFileSync(`./out/merged-scrolls.csv`, 'utf-8'))).toBe(compactString([`Item,Value(Silver Sovereigns)`, ...merged].join('\n')));
 });
 
 describe('should check installed dependencies', () => {

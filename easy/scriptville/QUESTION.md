@@ -1,6 +1,6 @@
 # Scriptville
 
-In the digital realm of Scriptville, where scripts ruled supreme, a talented coder named Finn received a mysterious challenge: **resize a collection of diverse image files in the src directory** to be four times larger and **place them in the dist directory**. With determination, Finn crafted a concise shell script that navigated the labyrinthine, executed resizing magic, and sent the transformed images to their destination. Finn's script became legendary in Scriptville, showcasing the power of automation and innovation in just a few lines of code, earning him the championship crown and the admiration of fellow scripters.
+In the digital realm of Scriptville, where scripts ruled supreme, a talented coder named Finn received a mysterious challenge: **resize a collection of diverse image files in the src directory** to be four times larger and **place them in the out directory**. With determination, Finn crafted a concise shell script that navigated the labyrinthine, executed resizing magic, and sent the transformed images to their destination. Finn's script became legendary in Scriptville, showcasing the power of automation and innovation in just a few lines of code, earning him the championship crown and the admiration of fellow scripters.
 
 ## Constraints
 
@@ -8,6 +8,6 @@ In the digital realm of Scriptville, where scripts ruled supreme, a talented cod
 
 ## Output / Evaluation Criteria
 
-- A 4x resized image in the dist directory for each image in the src directory.
+- A 4x resized image in the out directory for each image in the src directory.
 
 - The script should not crash if the src directory is empty or does not exist.

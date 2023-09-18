@@ -27,7 +27,7 @@ test('should validate if only bash files are present', () => {
 
 test('should check if the xml file is converted properly to JSON', async () => {
     await exec('bash execute.sh');
-    expect(JSON.stringify(JSON.parse(fs.readFileSync(`./dist/${filename}.json`, 'utf-8')))).toStrictEqual(JSON.stringify(data));
+    expect(JSON.stringify(JSON.parse(fs.readFileSync(`./out/${filename}.json`, 'utf-8')))).toStrictEqual(JSON.stringify(data));
 });
 
 describe('should check installed dependencies', () => {

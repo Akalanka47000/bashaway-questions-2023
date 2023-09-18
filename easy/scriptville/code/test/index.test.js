@@ -36,7 +36,7 @@ test('should validate if only bash files are present', () => {
 test('should check if the images are resized properly', async () => {
     await exec('bash execute.sh');
     await Promise.all(imageData.map(async ({ name, width, height }) => {
-        const size = await exec(`identify -format "%wx%h" dist/${name}.jpg`);
+        const size = await exec(`identify -format "%wx%h" out/${name}.jpg`);
         expect(size).toBe(`${width * 4}x${height * 4}`);
     }))
 });

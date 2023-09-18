@@ -10,7 +10,7 @@ These newly minted packages can be plugged into NodeJS and users can invoke them
 
 ## Output / Evaluation Criteria
 
-- NPM packages packed as tarballs for each script in the **src** directory should be present within a **dist** directory
+- NPM packages packed as tarballs for each script in the **src** directory should be present within a **out** directory
 
 - The tarballs should be named after the script they contain, with the extension ".tgz". For example, **if the script was named hello-world, the tarball should be named hello-world.tgz**. (The version number of the package is not important)
 

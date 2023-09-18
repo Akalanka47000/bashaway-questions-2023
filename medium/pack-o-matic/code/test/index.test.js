@@ -26,8 +26,8 @@ test('should check if scripts are packaged properly', async () => {
     await exec('bash execute.sh');
     for (const file of files) {
         const name = file.split("\\").pop().replace(".sh", "");
-        expect(fs.existsSync(`./dist/${name}.tgz`)).toBeTruthy();
-        await exec(`npm i -g ./dist/${name}.tgz`);
+        expect(fs.existsSync(`./out/${name}.tgz`)).toBeTruthy();
+        await exec(`npm i -g ./out/${name}.tgz`);
         await expect(exec(`bash -c \"${name}\"`)).resolves.toContain(`You just executed the ${name} script`);
     }
 });

@@ -1,7 +1,7 @@
 module.exports = {
     modulePathIgnorePatterns: [
-        '.*/dist/'
+        '.*/out/'
     ],
-    testPathIgnorePatterns: ['.*/node_modules/', '.*/src/', '.*/dist/'],
+    testPathIgnorePatterns: ['.*/node_modules/', '.*/src/', '.*/out/'],
     maxWorkers: 1
 };

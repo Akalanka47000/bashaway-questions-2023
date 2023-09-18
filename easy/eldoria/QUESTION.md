@@ -8,7 +8,7 @@ In the mystical realm of Eldoria, scattered scrolls of ancient lore emerged, eac
 
 ## Output / Evaluation Criteria
 
-- A single merged **csv** file to the **dist** folder, with the **values converted to Silver Sovereigns and sorted in descending order**. The file should be named **merged-scrolls.csv**. The original csv files will be within the **src** folder.
+- A single merged **csv** file to the **out** folder, with the **values converted to Silver Sovereigns and sorted in descending order**. The file should be named **merged-scrolls.csv**. The original csv files will be within the **src** folder.
 
 - The converted value must be rounded to the nearest 2 decimal places. For example, 1.2385 should become 1.24, and 1 should become 1.00.
 

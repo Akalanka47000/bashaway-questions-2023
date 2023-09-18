@@ -1,6 +1,6 @@
 module.exports = {
     modulePathIgnorePatterns: [
-        '.*/dist/'
+        '.*/out/'
     ],
     maxWorkers: 1
 };

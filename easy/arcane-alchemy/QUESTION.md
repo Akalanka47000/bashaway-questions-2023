@@ -1,6 +1,6 @@
 # Arcane Alchemy
 
-In a world brimming with possibilities, where data takes on a myriad forms, undertake an a quest to **metamorphose an unpredictable XML parchment, concealed within the src directory, into a JSON artifact** of formidable power. Harness your coding prowess to perform this arcane alchemy, and then set forth on an epic odyssey to **safeguard this newly wrought gem within the dist directory**, where its transformative abilities shall fuel future adventures beyond imagination!
+In a world brimming with possibilities, where data takes on a myriad forms, undertake an a quest to **metamorphose an unpredictable XML parchment, concealed within the src directory, into a JSON artifact** of formidable power. Harness your coding prowess to perform this arcane alchemy, and then set forth on an epic odyssey to **safeguard this newly wrought gem within the out directory**, where its transformative abilities shall fuel future adventures beyond imagination!
 
 ## Constraints
 
@@ -8,6 +8,6 @@ In a world brimming with possibilities, where data takes on a myriad forms, unde
 
 ## Output / Evaluation Criteria
 
-- A single JSON file, with the same name as the XML file, should be created within the dist directory.
+- A single JSON file, with the same name as the XML file, should be created within the out directory.
 
 - The script should not crash if the src directory is empty or does not exist.

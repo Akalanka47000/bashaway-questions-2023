@@ -22,7 +22,7 @@ test("should check if branch is still on main", async () => {
 })
 
 test('commits should be updated properly', async () => {
-    if (fs.existsSync('./dist')) fs.rmdirSync('./dist', { recursive: true });
+    if (fs.existsSync('./out')) fs.rmdirSync('./out', { recursive: true });
     const originalCommits = await commitList('https://github.com/sliit-foss/bashaway-ui.git');
     process.chdir(dir);
     const updatedCommits = await commitList('./src');

@@ -8,7 +8,7 @@ Imagine you're on an epic quest to uncover hidden treasures in a mysterious fore
 
 - You can install any tool you need to complete the task
 
-- Do not write anything to the **dist** folder. All modifications should be within the cloned repository within **src**
+- Do not write anything to the **out** folder. All modifications should be within the cloned repository within **src**
 
 ## Output / Evaluation Criteria
 

@@ -17,12 +17,12 @@ test('should validate if only bash files are present', () => {
 });
 
 test('all organization repos must be cloned properly', async () => {
-    await exec('bash -c \"git clone-gh-org sliit-foss ./dist\"')
+    await exec('bash -c \"git clone-gh-org sliit-foss ./out\"')
     const repos = await ghOrgRepos('sliit-foss');
-    const clonedRepos = fs.readdirSync(`dist`);
+    const clonedRepos = fs.readdirSync(`out`);
     expect(repos.length).toBe(clonedRepos.length);
     for (const repo of repos) {
-        process.chdir(`dist/${repo.name}`);
+        process.chdir(`out/${repo.name}`);
         const actual = await exec('bash -c \"basename $(git remote get-url origin)\"')
         expect(actual.trim().replace(new RegExp('\.git$'), '')).toStrictEqual(repo.name)
         process.chdir(dir)
