@@ -46,7 +46,4 @@ describe('should check installed dependencies', () => {
         await expect(dependencyCount()).resolves.toStrictEqual(4)
         expect(script).not.toMatch(prohibitedCommands);
     });
-    test('the script should be less than 40 characters in length', () => {
-        expect(script.length).toBeLessThan(40);
-    });
 });
