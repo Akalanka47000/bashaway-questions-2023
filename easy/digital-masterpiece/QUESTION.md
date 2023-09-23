@@ -5,6 +5,7 @@ Within the dormant directory of **src**, a solitary file lies. Its contents are 
 ## Constraints
 
 - The script must be **purely written in bash within the execute.sh file**.
+
 - The script must be **less than 50 characters** in length. (Including spaces, newlines, and the shebang line)
 
 ## Output / Evaluation Criteria
