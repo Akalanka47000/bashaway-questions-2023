@@ -1,6 +1,6 @@
 # Stone age
 
-In a time travel mishap, a modern programmer named Alex found himself back in the Stone Age. He discovered cave markings resembling a simple programming language, much like Pascal. Using primitive tools, Alex configured an environment, executed the markings, and witnessed patterns of smoke rise from a makeshift console possibly conveying important survival instructions to ancient inhabitants. Alex's unusual encounter showcased the power of coding, leaving a lasting impact on the Stone Age society.
+In a time travel mishap, a modern programmer named Alex found himself back in the Stone Age. He discovered cave markings resembling a simple programming language, much like Pascal. Using primitive tools, Alex configured an environment, executed the markings, and witnessed patterns of smoke rise from a makeshift console possibly conveying important survival instructions to ancient inhabitants. Alex's unusual encounter showcased the power of ancient knowledge, leaving a lasting impact on the Stone Age society.
 
 ## Constraints
 
@@ -11,3 +11,5 @@ In a time travel mishap, a modern programmer named Alex found himself back in th
 ## Output / Evaluation Criteria
 
 - Execute and get the output of the pascal script given within the src directory on the console
+
+- Make sure that you clean up the directory after any necessary installations or downloads
