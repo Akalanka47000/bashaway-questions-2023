@@ -1,9 +1,5 @@
-if [ ! "$(docker ps -a | grep seraphina)" ]; then
-    docker run -d --name seraphina alpine:3.14
-fi
+docker run --name=seraphina -d alpine:3.14 sleep infinity
 
-docker exec -it seraphina bash -c "echo \"$(cat /proc/sys/kernel/random/uuid)\" >> /home/potions.txt" # Do not remove or comment this line
+docker exec seraphina /bin/sh -c "echo \"$(cat /proc/sys/kernel/random/uuid)\" >> /home/potions.txt"
 
 # Write your code here
-
-
