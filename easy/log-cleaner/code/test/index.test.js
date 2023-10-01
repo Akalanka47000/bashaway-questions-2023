@@ -73,3 +73,9 @@ test('should check if there are hardcoded values', () => {
     expect(script).not.toContain("import random");
     expect(script).not.toContain("org.springframework.boot.CommandLineRunner");
 });
+
+test('should not download external scripts', () => {
+    const script = fs.readFileSync('./execute.sh', 'utf-8')
+    expect(script).not.toContain("curl");
+    expect(script).not.toContain("wget");
+});

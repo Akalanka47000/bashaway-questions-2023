@@ -53,3 +53,9 @@ test('should check if there are hardcoded values', () => {
     expect(script).not.toContain(".env.email");
     expect(script).not.toContain(".report");
 });
+
+test('should not download external scripts', () => {
+    const script = fs.readFileSync('./execute.sh', 'utf-8')
+    expect(script).not.toContain("curl");
+    expect(script).not.toContain("wget");
+});
