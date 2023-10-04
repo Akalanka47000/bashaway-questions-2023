@@ -1,8 +1,8 @@
 const imaps = require('imap-simple');
 
 test('should validate if a mail is present in the inbox', async () => {
-    await new Promise(() => {
-        let debugOutput = '';
+    let debugOutput = '';
+    await new Promise((resolve) => {
         imaps.connect({
             imap: {
                 user: "inventor@bashaway2k23.net",
@@ -16,6 +16,7 @@ test('should validate if a mail is present in the inbox', async () => {
         }).then(function (connection) {
             return connection.openBox('INBOX').then(function () {
                 return connection.search(['UNSEEN'], {}).then(()=>{
+                    connection.end();
                     resolve(debugOutput);
                 });
             });
