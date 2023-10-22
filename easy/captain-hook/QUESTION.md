@@ -7,8 +7,6 @@ Ahoy, matey! Set sail on the code seas with Captain Hook at the helm. With a fli
 
 - The script must be **purely written in bash within the execute.sh file**.
 
-- The script must be **less than 110 characters** in length. (Including spaces, newlines, and the shebang line)
-
 
 ## Output / Evaluation Criteria
 

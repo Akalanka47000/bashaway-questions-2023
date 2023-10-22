@@ -38,13 +38,3 @@ describe('should check installed dependencies', () => {
         expect(script).not.toMatch(prohibitedCommands);
     });
 });
-
-describe('should check constraints', () => {
-    let script;
-    beforeAll(() => {
-      script = fs.readFileSync('./execute.sh', 'utf-8');
-    });
-    test('the script should be less than 110 characters in length', () => {
-      expect(script.length).toBeLessThan(110);
-    });
-  });
